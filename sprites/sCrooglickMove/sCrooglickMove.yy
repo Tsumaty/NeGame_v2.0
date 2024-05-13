@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "sCrooglickMove",
   "bboxMode": 2,
-  "collisionKind": 0,
+  "collisionKind": 2,
   "type": 0,
   "origin": 9,
   "preMultiplyAlpha": false,

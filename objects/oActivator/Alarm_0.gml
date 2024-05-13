@@ -6,6 +6,6 @@ if (device)
     /*if (activated != prevActivated) // если до этого состояние было другое
         device.activated = activated; // меняем состояние устройства*/
     if (activated && !prevActivated) // если активирован, а был неактивирован
-        device.activated = true; // активируем
+        device.activated = true; // активируем устройство
     prevActivated = activated;
 }

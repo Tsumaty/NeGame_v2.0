@@ -10,7 +10,7 @@ if (canChangeDir)
         else
         {
             maxhorsp = 0;
-            alarm[0] = -1; // останавливаем эту проверку
+            alarm[0] = -1; // останавливаем проверку
         }
         canChangeDir = false;
         alarm[1] = canChangeDirTime;
@@ -22,7 +22,7 @@ if (canChangeDir)
         else
         {
             maxversp = 0;
-            alarm[0] = -1; // останавливаем эту проверку
+            alarm[0] = -1; // останавливаем проверку
         }
         canChangeDir = false;
         alarm[1] = canChangeDirTime;

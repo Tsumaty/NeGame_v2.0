@@ -17,8 +17,8 @@ with (surface)
     hspeed = other.hspeed;
     vspeed = other.vspeed;
 }
-
-/*var creat = instance_place(x, y - 3, oCreature); // существо, которое стоит на этой платформе
+/*
+var creat = instance_place(x, y - 3, oCreature); // существо, которое стоит на этой платформе
 with (oCreature)
 {
     if (colBottom(oMovingFloor) && vspeed >= 0)
@@ -30,8 +30,8 @@ if (creat && bbox_top > creat.bbox_bottom && creat.vspeed >= 0)
     creat.vspeed = 0;
     creat.x += horsp;
     creat.y += versp;
-}*/
-
+}
+*/
 if (horsp > 0)
     horsp = max(0, horsp - horAccelRate / 2);
 else if (horsp < 0)

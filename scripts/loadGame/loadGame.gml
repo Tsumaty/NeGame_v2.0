@@ -1,6 +1,43 @@
-// @desc функция загрузки
+/// @desc функция загрузки
 function loadGame(fileName)
 {
+    var dataBuffer = buffer_load(fileName);
+    if (dataBuffer == -1)
+        exit;
+    var dataString = buffer_read(dataBuffer, buffer_string);
+    buffer_delete(dataBuffer);
+    var data = json_parse(dataString);
+    for (var i = 0; i < array_length(data); ++i) 
+    {
+        switch (data[i].obj)
+        {
+            case "oDoor":
+                with (data[i].identNum)
+                {
+                    //if (id == data[i].identNum)
+                    //{
+                    isOpen = data[i].isOpen;
+                    y = (isOpen) ? openPos : closedPos;
+                    with (surface) y = (other.isOpen) ? openPos : closedPos;
+                    //}
+                }
+            break;
+            
+            case "oMovingFloor":
+                with (data[i].identNum)
+                {
+                    //if (id == data[i].identNum)
+                    //{
+                    horsp = data[i].horsp;
+                    versp = data[i].versp;
+                    alarm[0] = data[i].alarm0;
+                    alarm[1] = data[i].alarm1;
+                    //}
+                }
+            break;
+        }
+    }
+    /* СТАРЫЙ КОД (НЕ РАБОТАЕТ)
     var file = file_text_open_read(fileName);
     if (!file_exists(file))
     {
@@ -11,30 +48,17 @@ function loadGame(fileName)
 
     // десериализуем строку json обратно в данные
     var saveData = json_decode(saveStr);
-
     // проверяем, что файл сохранения существует и содержит данные
     if (saveData == undefined)
     {
-        show_message("Файл сохранения не найден или повреждён");
+        show_message("Файл сохранения повреждён");
         exit;
     }
-    
     var instanceList = ds_map_find_value(saveData, "instances");
     
     // восстанавливаем состояние динамических объектов
     for (var i = 0; i < ds_list_size(instanceList); ++i) {
         var instData = ds_list_find_value(instanceList, i);
-        
-        with (oPlayer)
-        {
-            hp = ds_map_find_value(instData, "hp");
-            x = ds_map_find_value(instData, "x");
-            y = ds_map_find_value(instData, "y");
-            horsp = ds_map_find_value(instData, "horsp");
-            versp = ds_map_find_value(instData, "versp");
-            isLookingRight = ds_map_find_value(instData, "right");
-            canBounce = ds_map_find_value(instData, "can_bounce");
-        }
         
         with (oDoor)
         {
@@ -66,7 +90,6 @@ function loadGame(fileName)
                 }
             }
         }
-        
         with (oMovingFloor)
         {
             arrived = ds_map_find_value(instData, "arrived");
@@ -86,4 +109,5 @@ function loadGame(fileName)
     // освобождаем ресурсы
     ds_list_destroy(instanceList);
     ds_map_destroy(saveData);
+    */
 }

@@ -14,5 +14,3 @@ canChangeDir = true; // может ли менять направление
 canChangeDirTime *= FPS; // время перед восстановления возможности смены направления
 changeDirPeriod *= FPS; // время проверки смены направления
 alarm[0] = changeDirPeriod;
-
-arrived = false; // прибыл на конечную точку

@@ -24,13 +24,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+  ],
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"nextLevel","varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],},
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Creatures",
-    "path": "folders/Objects/Creatures.yy",
+    "name": "Obstacles",
+    "path": "folders/Objects/Obstacles.yy",
   },
 }

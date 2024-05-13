@@ -1,9 +1,9 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sCrooglickStop",
-  "bboxMode": 2,
-  "collisionKind": 2,
+  "name": "sCrooglickMask",
+  "bboxMode": 0,
+  "collisionKind": 0,
   "type": 0,
   "origin": 9,
   "preMultiplyAlpha": false,
@@ -28,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"90ba360e-bb01-42c8-9b02-ad0d31f1d46f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3dc986d-1a63-499d-8c17-703f153ffd17",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sCrooglickStop",
+    "name": "sCrooglickMask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"76365238-b3cf-46e1-866e-3794942af458","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"90ba360e-bb01-42c8-9b02-ad0d31f1d46f","path":"sprites/sCrooglickStop/sCrooglickStop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"68e3aa51-4170-4ac0-a081-581a5c258443","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3dc986d-1a63-499d-8c17-703f153ffd17","path":"sprites/sCrooglickMask/sCrooglickMask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

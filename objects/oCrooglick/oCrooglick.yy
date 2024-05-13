@@ -10,8 +10,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "sCrooglickStop",
-    "path": "sprites/sCrooglickStop/sCrooglickStop.yy",
+    "name": "sCrooglickMask",
+    "path": "sprites/sCrooglickMask/sCrooglickMask.yy",
   },
   "persistent": false,
   "parentObjectId": {

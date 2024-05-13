@@ -12,7 +12,7 @@ if (!onMovingPlatform && isMoving == 0 && horsp == 0 && versp == GRAVITACCEL)
             if (!buttonE.activated)
                 activateButtonE(buttonE);
         }
-        else if (nearestPlayer.chatChar == id)
+        else if (nearestPlayer.chatChar == id || nearestPlayer.chatChar == noone)
         {
             nearestPlayer.isChatting = false;
             nearestPlayer.chatChar = noone;

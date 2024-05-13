@@ -4,10 +4,6 @@ if (y < 0 && (room == rMenu || room == rLevel1 || room == rTest))
 
 if (room == rLevelJumpTrain && y >= room_height)
 {
-    /*++deathsNumLevelJumpTrain;
-    room_restart();
-    playerCanBounce = canBounce;
-    playerIncreasedJumpsNum = increasedJumpsNum;*/
     deathNum = playSound(deathName, deathNum, deathMaxNum);
     initVars();
     // увеличиваем счётчик смертей на этом уровне
@@ -68,7 +64,7 @@ switch (room)
         {
             nextLevel = rMenu;
             newX = 1595;
-            newY = median(4, y + 110, 922);
+            newY = median(4, y + 114, 926);
         }
         else if (x >= room_width)
         {
@@ -113,13 +109,6 @@ x = newX;
 y = newY;
 horsp = newHorsp;
 versp = newVersp;
-
-with (oMovingFloor)
-{
-    if (!movesCyclically) arrived = true;
-}
-
-saveGame(string("negamesave{0}.nes", nextLevel));
 /*
 //prevLevel = room;
 curLevel = nextLevel;
