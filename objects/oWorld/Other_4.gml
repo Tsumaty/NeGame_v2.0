@@ -5,8 +5,3 @@ if (room == rInit)
 */
 stopGrindingSound();
 loadGame(string("negamesave{0}.nes", room));
-with (oPlayer)
-{
-    updateStartVars();
-    initCamera();
-}

@@ -2,32 +2,14 @@ event_inherited();
 defJumpForce = jumpForce; // стандартная сила прыжка
 increasedJumpForce = 2 * defJumpForce; // увеличенная сила прыжка
 increasedJumpsNum = 0; // оставшееся кол-во усиленных прыжков
+increasedJumpsNumstart = increasedJumpsNum;
 isChatting = false;
-chatChar = noone; // персонаж, с которым разговаривает
 deathsNumLevelJumpTrain = 0; // количество смертей на уровне обучения прыжкам
-depth -= 2;
+depth -= 5;
 
-enum EndChatEvents
-{
-    CanBounce,
-    IncreaseJumpForce
-}
-
+chatChar = noone; // с кем сейчас разговаривает
 endChatChar = noone; // когда заканчивает разговор с этим персонажем,
 endChatEvent = pointer_null; // происходит это событие
-
-// функция обновления начальных переменных
-updateStartVars = function()
-{
-    hpstart = hp;
-    xstart = x;
-    ystart = y;
-    horspstart = horsp;
-    verspstart = versp;
-    rightstart = isLookingRight;
-    increasedJumpsNumstart = increasedJumpsNum;
-}
-updateStartVars();
 
 // звуки шагов
 var sndNums = initSound(stompName);
@@ -62,41 +44,5 @@ initCamera = function()
 }
 initCamera();
 
-// функция перевода переменных в начальное состояние
-initVars = function()
-{
-    hp = hpstart;
-    x = xstart;
-    y = ystart;
-    horsp = horspstart;
-    versp = verspstart;
-    isLookingRight = rightstart;
-    increasedJumpsNum = increasedJumpsNumstart;
-    chatChar = noone;
-}
-/*
-// иницализируем переменные
-initVars = function()
-{
-    hp = playerHp;
-    x = playerX;
-    y = playerY;
-    horsp = playerHorsp / FPS;
-    versp = playerVersp / FPS;
-    isLookingRight = playerRight;
-    canBounce = playerCanBounce;
-    isChatting = false;
-    chatChar = noone; // персонаж, с которым разговаривает
-    endChatChar = noone; // когда заканчивает разговор с этим персонажем,
-    endChatEvent = ""; // происходит это событие
-    increasedJumpsNum = playerIncreasedJumpsNum; // оставшееся кол-во усиленных прыжков
-    jumpForce = (increasedJumpsNum > 0) ? increasedJumpForce : defJumpForce;
-    
-    // устанавливаем границы и скорость наблюдения за игроком
-    var mainCamera = view_get_camera(0);
-    camera_set_view_border(mainCamera, camera_get_view_width(mainCamera) / 2 * 0.97,
-                           camera_get_view_height(mainCamera) / 2 * 0.95);
-    camera_set_view_speed(mainCamera, 360 / FPS, 600 / FPS);
-}
-initVars();
-*/
+isTakingDamage = false; // получает ли урон
+blinkingPeriod *= FPS; // период мерцания при получении урона

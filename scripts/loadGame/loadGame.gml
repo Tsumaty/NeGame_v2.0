@@ -1,11 +1,53 @@
 /// @desc функция загрузки
 function loadGame(fileName)
 {
+    with (oCreature)
+    {
+        initVars();
+    }
+    with (oPlayer)
+    {
+        chatChar = noone;
+        increasedJumpsNum = increasedJumpsNumstart;
+        initCamera();
+    }
+    with (inst_7E52E5C7)
+    {
+        with (oPlayer)
+        {
+            if (deathsNumLevelJumpTrain >= 2)
+            {
+                other.chatCloud.msg = teacherMsgSet[2];
+                endChatChar = other.id;
+                endChatEvent = EndChatEvents.IncreaseJumpForce;
+            }
+            else if (deathsNumLevelJumpTrain >= 1)
+            {
+                other.chatCloud.msg = teacherMsgSet[1];
+                endChatChar = other.id;
+                endChatEvent = EndChatEvents.CanBounce;
+            }
+        }
+        var player = instance_find(oPlayer, 0);
+        if (player.deathsNumLevelJumpTrain >= 2)
+        {
+            chatCloud.msg = ["Всё равно не\nполучается?",
+                             "А если так?",
+                             "У тебя есть\nтри попытки"];
+            player.endChatChar = id;
+            player.endChatEvent = EndChatEvents.IncreaseJumpForce;
+        }
+    }
+    
     var dataBuffer = buffer_load(fileName);
     if (dataBuffer == -1)
+    {
+        show_message("При загрузке произошла ошибка:\nФайл сохранения не найден!");
         exit;
+    }
     var dataString = buffer_read(dataBuffer, buffer_string);
     buffer_delete(dataBuffer);
+    
     var data = json_parse(dataString);
     for (var i = 0; i < array_length(data); ++i) 
     {
@@ -14,27 +56,31 @@ function loadGame(fileName)
             case "oDoor":
                 with (data[i].identNum)
                 {
-                    //if (id == data[i].identNum)
-                    //{
                     isOpen = data[i].isOpen;
                     y = (isOpen) ? openPos : closedPos;
                     with (surface) y = (other.isOpen) ? openPos : closedPos;
-                    //}
                 }
             break;
             
             case "oMovingFloor":
                 with (data[i].identNum)
                 {
-                    //if (id == data[i].identNum)
-                    //{
                     horsp = data[i].horsp;
                     versp = data[i].versp;
                     alarm[0] = data[i].alarm0;
                     alarm[1] = data[i].alarm1;
-                    //}
                 }
             break;
+        }
+    }
+    
+    with (oPlayer)
+    {
+        if (place_meeting(x, y, oObstacle))
+        {
+            do {
+                y -= 2;
+            } until (!place_meeting(x, y, oObstacle));
         }
     }
     /* СТАРЫЙ КОД (НЕ РАБОТАЕТ)

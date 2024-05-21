@@ -1,3 +1,4 @@
+// получаем спрайты
 var spriteName = "s" + name; // название спрайта
 var spriteNameStop = spriteName + "Stop"; // название спрайта неподвижности
 var spriteNameMove = spriteName + "Move"; // название спрайта передвижения
@@ -13,7 +14,6 @@ if (sprite != -1) spriteMove = sprite;
 spriteMoveSpeed /= FPS; // скорость
 
 isLookingRight = bool(sign(image_xscale)); // смотрит ли вправо
-//hp = 10; // очки здоровья
 maxsp /= FPS; // максимальная скорость
 accelRate *= maxsp; // скорость ускорения
 liftSpeed *= maxsp; // скорость подъёма на препятствия
@@ -55,3 +55,8 @@ groundMaxNum = sndNums[1]; // максимальный номер
 sndNums = initSound(bounceName);
 bounceNum = sndNums[0];
 bounceMaxNum = sndNums[1];
+
+startColor = image_blend; // начальный цвет
+startAlpha = image_alpha; // начальная прозрачность
+
+updateStartVars();

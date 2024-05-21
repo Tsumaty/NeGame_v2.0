@@ -4,16 +4,13 @@ if (y < 0 && (room == rMenu || room == rLevel1 || room == rTest))
 
 if (room == rLevelJumpTrain && y >= room_height)
 {
-    deathNum = playSound(deathName, deathNum, deathMaxNum);
-    initVars();
+    killPlayer();
     // увеличиваем счётчик смертей на этом уровне
     if (++deathsNumLevelJumpTrain >= 2)
     {
         with (inst_7E52E5C7)
         {
-            chatCloud.msg = ["Всё равно не\nполучается?",
-                             "А если так?",
-                             "У тебя есть\nтри попытки"];
+            chatCloud.msg = teacherMsgSet[2];
             // усиливаем силу прыжка игрока
             other.endChatChar = id;
             other.endChatEvent = EndChatEvents.IncreaseJumpForce;
@@ -24,9 +21,7 @@ if (room == rLevelJumpTrain && y >= room_height)
     {
         with (inst_7E52E5C7)
         {
-            chatCloud.msg = ["Не допрыгиваешь, да?",
-                             "Попробуй от чего-\nнибудь отскочить",
-                             "...или от кого-нибудь"];
+            chatCloud.msg = teacherMsgSet[1];
             // теперь игрок может отталкиваться от персонажей
             other.endChatChar = id;
             other.endChatEvent = EndChatEvents.CanBounce;
@@ -83,11 +78,8 @@ switch (room)
         }
         else if (x >= room_width)
         {
-            nextLevel = rMenu;
-            newX = 804;
-            newY = 16;
-            newHorsp = 0;
-            newVersp = 0;
+            nextLevel = rLevel2;
+            newX = 4;
         }
     break;
     

@@ -1,10 +1,8 @@
-/// @desc функция убийства игрока (не исп-ся)
+/// @desc функция убийства игрока
 function killPlayer()
 {
-    with (oPlayer)
-    {
-        deathNum = playSound(deathName, deathNum, deathMaxNum);
-        room_restart();
-        break; // если игроков оказалось два и более
-    }
+    deathNum = playSound(deathName, deathNum, deathMaxNum);
+    initVars();
+    chatChar = noone;
+    increasedJumpsNum = increasedJumpsNumstart;
 }

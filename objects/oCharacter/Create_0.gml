@@ -24,5 +24,5 @@ if (jumpDelay > 0) alarm[3] = jumpDelay;
 chatCloud = instance_create_depth(bbox_right + 4, bbox_top, depth - 10, oDialogCloud,
     {msg : chatMsg});
 // кнопка диалога
-buttonE = instance_create_depth(x, bbox_top - 24, depth, oButton,
+buttonE = instance_create_depth(x, bbox_top - 24, depth - 1, oButton,
     {text : "E", visible : false});

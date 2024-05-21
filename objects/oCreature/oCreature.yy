@@ -30,7 +30,8 @@
   ],
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"name","varType":2,"value":"\"Creature\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"hp","varType":0,"value":"10","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"hp","varType":0,"value":"10","rangeEnabled":true,"rangeMin":0.0,"rangeMax":255.0,"listItems":[],"multiselect":false,"filters":[],},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"maxHp","varType":4,"value":"hp","rangeEnabled":true,"rangeMin":0.0,"rangeMax":255.0,"listItems":[],"multiselect":false,"filters":[],},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"horsp","varType":0,"value":"0","rangeEnabled":true,"rangeMin":-900.0,"rangeMax":900.0,"listItems":[],"multiselect":false,"filters":[],},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"versp","varType":0,"value":"0","rangeEnabled":true,"rangeMin":-900.0,"rangeMax":900.0,"listItems":[],"multiselect":false,"filters":[],},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"maxsp","varType":0,"value":"180","rangeEnabled":true,"rangeMin":0.0,"rangeMax":900.0,"listItems":[],"multiselect":false,"filters":[],},

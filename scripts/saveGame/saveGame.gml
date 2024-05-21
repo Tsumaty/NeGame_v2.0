@@ -1,6 +1,15 @@
 /// @desc функция сохранения
 function saveGame(fileName)
 {
+    with (oCreature)
+    {
+        updateStartVars();
+    }
+    with (oPlayer)
+    {
+        increasedJumpsNumstart = increasedJumpsNum;
+    }
+    
     var data = array_create(0);
     
     with (oDoor)

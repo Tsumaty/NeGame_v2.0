@@ -7,6 +7,25 @@ FPS = game_get_speed(gamespeed_fps); // скорость игры
 WINDAGE = 12.0 / FPS; // сопротивление воздуха
 MAXMOVESP = 3000.0 / FPS; // предел скорости передвижения
 GRAVITACCEL = 60.0 / FPS; // ускорение свободного падения
+
+enum EndChatEvents
+{
+    CanBounce,
+    IncreaseJumpForce
+}
+
+globalvar teacherMsgSet;
+teacherMsgSet =
+[
+    ["Что ж, вот твоё\nпервое испытание",
+        "Давай, перепрыгни\nэту пропасть"],
+    ["Не допрыгиваешь, да?",
+        "Попробуй от чего-\nнибудь отскочить",
+        "...или от кого-нибудь"],
+    ["Всё равно не\nполучается?",
+        "А если так?",
+        "У тебя есть\nтри попытки"]
+];
 /*
 ini_open("options.ini");
 room_goto(ini_read_real("GameOptions", "level", rMenu));
