@@ -6,9 +6,7 @@ function activateChatCloud(chatCloud)
         activated = true;
         // проигрываем анимацию с начала
         animPos = 0;
-        //animSpeed = animDefaultSpeed;
         playAnim = 1;
-        //playAnimForwards = true;
         // анимацию сообщения временно отключаем
         msgVisible = false;
         msgAnimPos = 0;

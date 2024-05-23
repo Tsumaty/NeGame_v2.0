@@ -1,6 +1,5 @@
 image_speed = 0;
 
-//
 // облако
 //
 activated = false; // активировано ли
@@ -11,11 +10,9 @@ scaley = 0;
 // анимация появления
 animCurve = animcurve_get_channel(pingPong, 0);
 animPos = 0; // позиция
-//animDefaultSpeed = animSpeed; // стандартная скорость
+animSpeed /= FPS; // скорость воспроизведения
 playAnim = 0; // 0 - не проигрывать, 1 - проигрывать вперёд, -1 - задом наперёд
-//playAnimForwards = true; // проигрывать вперёд
 
-//
 // реплики
 //
 //msg = [];
@@ -30,8 +27,8 @@ msgScaley = 0;
 // анимация
 msgAnimCurve = animcurve_get_channel(pingPong, 0);
 msgAnimPos = 0; // позиция
+msgAnimSpeed /= FPS; // скорость анимации
 playMsgAnim = 0; // 0 - не проигрывать, 1 - проигрывать вперёд, -1 - задом наперёд
-//playMsgAnimForwards = true; // проигрывать вперёд
 msgVisible = false; // видимость сообщения
 msgTimer = -1; // таймер включения сообщения
 
@@ -42,3 +39,5 @@ msgTimer = -1; // таймер включения сообщения
 var sndNums = initSound(chatName);
 chatNum = sndNums[0];
 chatMaxNum = sndNums[1];
+
+endChatEvent = pointer_null; // событие конца разговора

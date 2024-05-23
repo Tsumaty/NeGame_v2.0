@@ -38,14 +38,7 @@ if (activated)
             isOpening = true;
             stopGrindingSound();
             isOpen = false;
-            if (place_meeting(x, y, oPlayer))
-            {
-                with (oPlayer)
-                {
-                    deathNum = playSound(deathName, deathNum, deathMaxNum);
-                    initVars();
-                }
-            }
+            with (instance_place(x, y, oPlayer)) killPlayer();
         }
     }
 }

@@ -3,6 +3,6 @@ function initSpeeds(sp)
 {
     accelRate = sp / 5; // скорость ускорения
     liftSpeed = sp * 1.3; // скорость подъёма
-    liftMaxHeight = (bbox_bottom - bbox_top) / 14 + 4;
+    liftMaxHeight = (bbox_bottom - bbox_top) / 14 + 4; // макс. высота подъёма
     decelRate = sp / 8; // скорость замедления
 }

@@ -4,4 +4,5 @@ if (room == rInit)
     exit;
 */
 stopGrindingSound();
-loadGame(string("negamesave{0}.nes", room));
+if (!firstLaunch)
+    loadGame(string("negamesave{0}.nes", room));

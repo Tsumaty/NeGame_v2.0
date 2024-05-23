@@ -1,5 +1,5 @@
 /// @desc активация устройства
-if (device)
+if (unlocked && device != noone)
 {
     alarm[0] = colPlayerPeriod;
     activated = place_meeting(x, y, oPlayer);

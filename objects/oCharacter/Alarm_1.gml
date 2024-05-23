@@ -8,11 +8,15 @@ if (!onMovingPlatform && isMoving == 0 && horsp == 0 && versp == GRAVITACCEL)
     {
         if (distance_to_object(nearestPlayer) < chatDist)
         {
-            nearestPlayer.chatChar = id;
-            if (!buttonE.activated)
-                activateButtonE(buttonE);
+            if (nearestPlayer.chatChar == noone || nearestPlayer.chatChar != nearestPlayer.id)
+            {
+                nearestPlayer.chatChar = id;
+                if (!buttonE.activated)
+                    activateButtonE(buttonE);
+            }
         }
-        else if (nearestPlayer.chatChar == id || nearestPlayer.chatChar == noone)
+        else if (nearestPlayer.chatChar != nearestPlayer.id && 
+            (nearestPlayer.chatChar == id || nearestPlayer.chatChar == noone))
         {
             nearestPlayer.isChatting = false;
             nearestPlayer.chatChar = noone;

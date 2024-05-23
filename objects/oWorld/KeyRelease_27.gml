@@ -2,9 +2,9 @@ if (room != rMenu && room_exists(rMenu))
 {
     with (oPlayer)
     {
-        hp = 10;
-        x = 804;
-        y = 16;
+        hp = playerStartHp;
+        x = playerStartX;
+        y = playerStartY;
         horsp = 0;
         versp = 0;
         isLookingRight = true;

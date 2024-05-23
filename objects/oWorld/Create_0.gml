@@ -11,7 +11,9 @@ GRAVITACCEL = 60.0 / FPS; // ускорение свободного паден�
 enum EndChatEvents
 {
     CanBounce,
-    IncreaseJumpForce
+    IncreaseJumpForce,
+    Talk,
+    DestroyChatCloud
 }
 
 globalvar teacherMsgSet;
@@ -24,8 +26,19 @@ teacherMsgSet =
         "...или от кого-нибудь"],
     ["Всё равно не\nполучается?",
         "А если так?",
-        "У тебя есть\nтри попытки"]
+        "У тебя есть\nтри попытки"],
+    ["А почему ты\nмолчишь?",
+        "Вроде ж не\nнемой"]
 ];
+
+ini_open("options.ini");
+firstLaunch = ini_read_real("GameOptions", "firstLaunch", true);
+ini_close();
+
+globalvar playerStartX, playerStartY, playerStartHp;
+playerStartX = 810;
+playerStartY = -16;
+playerStartHp = 10;
 /*
 ini_open("options.ini");
 room_goto(ini_read_real("GameOptions", "level", rMenu));

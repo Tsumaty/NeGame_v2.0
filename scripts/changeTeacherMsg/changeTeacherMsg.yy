@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "killPlayer",
+  "name": "changeTeacherMsg",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

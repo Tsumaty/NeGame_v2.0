@@ -1,8 +1,8 @@
 /// @desc функция убийства игрока
+// (вызывается игроком)
 function killPlayer()
 {
     deathNum = playSound(deathName, deathNum, deathMaxNum);
     initVars();
-    chatChar = noone;
-    increasedJumpsNum = increasedJumpsNumstart;
+    changeTeacherMsg();
 }

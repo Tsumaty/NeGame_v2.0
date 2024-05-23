@@ -5,10 +5,6 @@ function saveGame(fileName)
     {
         updateStartVars();
     }
-    with (oPlayer)
-    {
-        increasedJumpsNumstart = increasedJumpsNum;
-    }
     
     var data = array_create(0);
     
@@ -18,9 +14,19 @@ function saveGame(fileName)
         {
             obj : "oDoor",
             identNum : id,
-            isOpen : isOpen,
+            open : isOpen
         };
         array_push(data, instData);
+    }
+    
+    with (oActivator)
+    {
+        var instData =
+        {
+            obj : "oActivator",
+            identNum : id,
+            available : unlocked
+        };
     }
     
     with (oMovingFloor)
@@ -29,10 +35,15 @@ function saveGame(fileName)
         {
             obj : "oMovingFloor",
             identNum : id,
-            horsp : horsp,
-            versp : versp,
+            posX : x,
+            posY : y,
+            horSpeed : horsp,
+            verSpeed : versp,
+            maxHorSpeed : maxhorsp,
+            maxVerSpeed : maxversp,
+            backwards : movesCyclically,
             alarm0 : alarm[0],
-            alarm1 : alarm[1],
+            alarm1 : alarm[1]
         };
         array_push(data, instData);
     }

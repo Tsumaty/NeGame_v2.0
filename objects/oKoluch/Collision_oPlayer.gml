@@ -8,7 +8,7 @@ if (bbox_top < other.y)
             deathNum = playSound(deathName, deathNum, deathMaxNum);
             if (hp <= 0.0)
             {
-                killPlayer();
+                killPlayer()();
             }
             isTakingDamage = true;
             image_blend = c_red;

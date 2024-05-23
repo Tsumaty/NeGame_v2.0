@@ -1,32 +1,12 @@
 /// @desc переход на следующий уровень
-if (y < 0 && (room == rMenu || room == rLevel1 || room == rTest))
+if (y < 0)
     exit;
 
 if (room == rLevelJumpTrain && y >= room_height)
 {
-    killPlayer();
     // увеличиваем счётчик смертей на этом уровне
-    if (++deathsNumLevelJumpTrain >= 2)
-    {
-        with (inst_7E52E5C7)
-        {
-            chatCloud.msg = teacherMsgSet[2];
-            // усиливаем силу прыжка игрока
-            other.endChatChar = id;
-            other.endChatEvent = EndChatEvents.IncreaseJumpForce;
-            // (жел-но ещё чтоб ноги засветились синим)
-        }
-    }
-    else if (deathsNumLevelJumpTrain >= 1)
-    {
-        with (inst_7E52E5C7)
-        {
-            chatCloud.msg = teacherMsgSet[1];
-            // теперь игрок может отталкиваться от персонажей
-            other.endChatChar = id;
-            other.endChatEvent = EndChatEvents.CanBounce;
-        }
-    }
+    ++deathsNumLevelJumpTrain;
+    killPlayer(); // умираем
     exit;
 }
 

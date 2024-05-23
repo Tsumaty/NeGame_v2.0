@@ -23,6 +23,8 @@ if (playAnim != 0)
             animPos = 0;
             playAnim = 0;
             visible = false;
+            if (endChatEvent == EndChatEvents.DestroyChatCloud)
+                instance_destroy();
         }
     }
 }

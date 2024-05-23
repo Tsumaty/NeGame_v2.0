@@ -40,7 +40,8 @@ if (place_meeting(x, y + versp, oObstacle) || (colBottom(oPlatform) && versp > p
     if (place_empty(x, y + platfVersp, oObstacle))
         versp = platfVersp;
     else
-        versp = 0;*/
+        versp = 0;
+    */
     versp = platfVersp;
 }
 
@@ -54,7 +55,7 @@ if (place_meeting(x + horsp, y, oObstacle))
         slowedhorsp = min(platfHorsp, horsp + decelRate);
     var uppedversp = max(-liftMaxSpeed, versp - liftSpeed);
     // если можно подняться
-    if (slowedhorsp != 0 && place_empty(x + slowedhorsp, y + uppedversp, oObstacle))
+    if (slowedhorsp != 0 && uppedversp != 0 && place_empty(x + slowedhorsp, y + uppedversp, oObstacle))
     {
         // замедляемся и поднимаемся
         horsp = slowedhorsp;
@@ -81,7 +82,8 @@ if (place_meeting(x + horsp, y, oObstacle))
             horsp = platfHorsp;
         else
             horsp = 0;
-    }*/
+    }
+    */
 }
 
 // что под ногами

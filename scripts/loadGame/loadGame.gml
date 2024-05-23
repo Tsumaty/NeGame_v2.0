@@ -7,44 +7,17 @@ function loadGame(fileName)
     }
     with (oPlayer)
     {
-        chatChar = noone;
-        increasedJumpsNum = increasedJumpsNumstart;
         initCamera();
-    }
-    with (inst_7E52E5C7)
-    {
-        with (oPlayer)
-        {
-            if (deathsNumLevelJumpTrain >= 2)
-            {
-                other.chatCloud.msg = teacherMsgSet[2];
-                endChatChar = other.id;
-                endChatEvent = EndChatEvents.IncreaseJumpForce;
-            }
-            else if (deathsNumLevelJumpTrain >= 1)
-            {
-                other.chatCloud.msg = teacherMsgSet[1];
-                endChatChar = other.id;
-                endChatEvent = EndChatEvents.CanBounce;
-            }
-        }
-        var player = instance_find(oPlayer, 0);
-        if (player.deathsNumLevelJumpTrain >= 2)
-        {
-            chatCloud.msg = ["Всё равно не\nполучается?",
-                             "А если так?",
-                             "У тебя есть\nтри попытки"];
-            player.endChatChar = id;
-            player.endChatEvent = EndChatEvents.IncreaseJumpForce;
-        }
+        changeTeacherMsg();
     }
     
     var dataBuffer = buffer_load(fileName);
     if (dataBuffer == -1)
     {
         show_message("При загрузке произошла ошибка:\nФайл сохранения не найден!");
-        exit;
     }
+    else
+    {
     var dataString = buffer_read(dataBuffer, buffer_string);
     buffer_delete(dataBuffer);
     
@@ -56,22 +29,48 @@ function loadGame(fileName)
             case "oDoor":
                 with (data[i].identNum)
                 {
-                    isOpen = data[i].isOpen;
+                    isOpen = data[i].open;
                     y = (isOpen) ? openPos : closedPos;
                     with (surface) y = (other.isOpen) ? openPos : closedPos;
+                }
+            break;
+            
+            case "oActivator":
+                with (data[i].identNum)
+                {
+                    unlocked = data[i].available;
                 }
             break;
             
             case "oMovingFloor":
                 with (data[i].identNum)
                 {
-                    horsp = data[i].horsp;
-                    versp = data[i].versp;
+                    x = data[i].posX;
+                    y = data[i].posY;
+                    with (surface)
+                    {
+                        x += other.xprevious;
+                        y += other.yprevious;
+                    }
+                    with (oPlayer)
+                    {
+                        if (x == playerStartX && y == playerStartY)
+                        {
+                            y = other.y - 28;
+                            updateStartVars();
+                        }
+                    }
+                    horsp = data[i].horSpeed;
+                    versp = data[i].verSpeed;
+                    maxhorsp = data[i].maxHorSpeed;
+                    maxversp = data[i].maxVerSpeed;
+                    movesCyclically = data[i].backwards;
                     alarm[0] = data[i].alarm0;
                     alarm[1] = data[i].alarm1;
                 }
             break;
         }
+    }
     }
     
     with (oPlayer)

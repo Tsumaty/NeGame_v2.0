@@ -1,7 +1,5 @@
 event_inherited();
 
-//chatMsg = []; // набор фраз для разговора
-//chatDist = 170; // расстояние активации возможности разговора
 if (isMoving == 0)
 {
     checkPlayerPeriod *= FPS; // период проверки, рядом ли игрок

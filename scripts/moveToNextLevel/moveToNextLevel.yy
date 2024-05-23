@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "killPlayer",
+  "name": "moveToNextLevel",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

@@ -1,4 +1,5 @@
 /// @desc функция перевода переменных в начальное состояние
+// (вызывается любым существом)
 function initVars()
 {
     hp = hpstart;
@@ -7,4 +8,10 @@ function initVars()
     horsp = horspstart;
     versp = verspstart;
     isLookingRight = rightstart;
+    if (object_index == oPlayer)
+    {
+        chatChar = noone;
+        chatCloud = noone;
+        increasedJumpsNum = increasedJumpsNumstart;
+    }
 }
