@@ -28,9 +28,15 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1B98F47B","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextLevel","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"rMenu",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextX","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"1596",},
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextY","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"114",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextY","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"86",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextYRelative","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"True",},
           ],"isDnd":false,"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294902015,"rotation":0.0,"scaleX":4.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-84.0,"y":714.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3F00A71C","properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextLevel","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"rLevel1",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextX","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"4",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextY","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"-144",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextYRelative","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"True",},
+          ],"isDnd":false,"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294902015,"rotation":0.0,"scaleX":4.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2084.0,"y":714.0,},
       ],"visible":true,"depth":-10,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":2,"gridY":2,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Creatures","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_teacher1","properties":[
@@ -63,6 +69,7 @@
     {"name":"inst_2EEE420","path":"rooms/rLevelJumpTrain/rLevelJumpTrain.yy",},
     {"name":"inst_2F94F322","path":"rooms/rLevelJumpTrain/rLevelJumpTrain.yy",},
     {"name":"inst_1B98F47B","path":"rooms/rLevelJumpTrain/rLevelJumpTrain.yy",},
+    {"name":"inst_3F00A71C","path":"rooms/rLevelJumpTrain/rLevelJumpTrain.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -70,7 +77,7 @@
     "inheritRoomSettings": false,
     "Width": 2000,
     "Height": 1124,
-    "persistent": false,
+    "persistent": true,
   },
   "viewSettings": {
     "inheritViewSettings": false,

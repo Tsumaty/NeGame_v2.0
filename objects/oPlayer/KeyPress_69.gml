@@ -35,6 +35,7 @@ if (instance_exists(chatCloud) && other.horsp == 0 && other.versp == GRAVITACCEL
                             with (chatCloud) endChatEvent = EndChatEvents.DestroyChatCloud;
                             endChatChar = noone;
                             endChatEvent = EndChatEvents.Talk;
+                            canBounce = true;
                         break;
                         
                         // говорение
@@ -42,8 +43,15 @@ if (instance_exists(chatCloud) && other.horsp == 0 && other.versp == GRAVITACCEL
                             if (chatCloud == noone)
                             {
                                 chatCloud = instance_create_depth(bbox_right + 4, bbox_top,
-                                    depth - 1, oDialogCloud, {msg : chatMsgSet[0]});
-                                chatCloud.msgNumber = 0;
+                                    depth - 1, oDialogCloud);
+                                with (chatCloud)
+                                {
+                                    msg = other.chatMsgSet[0];
+                                    msgNumber = 0;
+                                    isLookingRight = !other.isLookingRight;
+                                    if (!isLookingRight)
+                                        x = bbox_left - 4;
+                                }
                                 activateChatCloud(chatCloud);
                                 chatChar = id;
                                 isChatting = true;
@@ -81,7 +89,8 @@ if (instance_exists(chatCloud) && other.horsp == 0 && other.versp == GRAVITACCEL
         // начинается разговор
         other.isChatting = true;
         // персонаж разворачивается к игроку
-        isLookingRight = bool(sign(other.x - x));
+        if (id != other.id)
+            isLookingRight = bool(sign(other.x - x));
         //chatCloud.isLookingRight = !isLookingRight;
         if (chatCloud.msgNumber >= array_length(chatCloud.msg) - 1)
             chatCloud.msgNumber = 0;

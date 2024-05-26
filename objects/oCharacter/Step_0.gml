@@ -27,5 +27,7 @@ if (jumped)
 
 buttonE.hspeed = x - xprevious;
 buttonE.vspeed = y - yprevious;
+chatCloud.hspeed = x - xprevious;
+chatCloud.vspeed = y - yprevious;
 chatCloud.isLookingRight = !isLookingRight;
 chatCloud.x = (isLookingRight) ? bbox_left - 4 : bbox_right + 4;

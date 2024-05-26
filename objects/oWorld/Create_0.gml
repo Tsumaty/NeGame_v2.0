@@ -39,6 +39,9 @@ globalvar playerStartX, playerStartY, playerStartHp;
 playerStartX = 810;
 playerStartY = -16;
 playerStartHp = 10;
+
+globalvar level2Open;
+level2Open = false;
 /*
 ini_open("options.ini");
 room_goto(ini_read_real("GameOptions", "level", rMenu));

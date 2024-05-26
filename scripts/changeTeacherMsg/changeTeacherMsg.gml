@@ -4,7 +4,7 @@ function changeTeacherMsg()
 {
     with (inst_teacher1)
     {
-        if (other.deathsNumLevelJumpTrain >= 3)
+        if (other.deathsNumLevelJumpTrain == 3)
         {
             chatCloud.msg = teacherMsgSet[3];
             other.endChatChar = id;
