@@ -28,11 +28,13 @@ teacherMsgSet =
         "А если так?",
         "У тебя есть\nтри попытки"],
     ["А почему ты\nмолчишь?",
-        "Вроде ж не\nнемой"]
+        "Вроде ж не немой"]
 ];
 
+globalvar firstLaunch, level2Open;
 ini_open("options.ini");
 firstLaunch = ini_read_real("GameOptions", "firstLaunch", true);
+level2Open = ini_read_real("GameOptions", "level2Open", false);
 ini_close();
 
 globalvar playerStartX, playerStartY, playerStartHp;
@@ -40,8 +42,15 @@ playerStartX = 810;
 playerStartY = -16;
 playerStartHp = 10;
 
-globalvar level2Open;
-level2Open = false;
+globalvar killedKoluchs;
+killedKoluchs = ds_list_create(); // список убитых колючей
+ini_open("killed_koluchs.ini");
+var listSize = ini_read_real("List", "size", 0);
+for (var i = 0; i < listSize; ++i)
+{
+    ds_list_add(killedKoluchs, ini_read_real("List", string("kol{0}", i), real(noone)));
+}
+ini_close();
 /*
 ini_open("options.ini");
 room_goto(ini_read_real("GameOptions", "level", rMenu));

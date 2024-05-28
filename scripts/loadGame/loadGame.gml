@@ -5,11 +5,6 @@ function loadGame(fileName)
     {
         initVars();
     }
-    with (oPlayer)
-    {
-        initCamera();
-        changeTeacherMsg();
-    }
     
     var dataBuffer = buffer_load(fileName);
     if (dataBuffer != -1)
@@ -65,12 +60,22 @@ function loadGame(fileName)
                     alarm[1] = data[i].alarm1;
                 }
             break;
+            
+            case "oPlayer":
+                with (data[i].identNum)
+                {
+                    canBounce = data[i].bounce;
+                    deathsNumLevelJumpTrain = data[i].deaths;
+                }
+            break;
         }
     }
     }
     
     with (oPlayer)
     {
+        initCamera();
+        changeTeacherMsg();
         if (place_meeting(x, y, oObstacle))
         {
             do {

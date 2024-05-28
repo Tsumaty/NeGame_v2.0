@@ -1,13 +1,6 @@
 /// @desc движение
 jumped = false;
 
-// проверка опоры stand под ногами
-var colBottom = function(stand)
-{
-    return collision_ellipse(bbox_left + 1, bbox_bottom - (bbox_bottom - bbox_top) / 5 + 2,
-                             bbox_right - 1, bbox_bottom + 2, stand, true, true);
-}
-
 // движущаяся платформа
 var movingPlatf = colBottom(oMovingFloor);
 

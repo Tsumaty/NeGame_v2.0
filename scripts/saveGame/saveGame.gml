@@ -48,6 +48,18 @@ function saveGame(fileName)
         array_push(data, instData);
     }
     
+    if (room == rLevelJumpTrain) with (oPlayer)
+    {
+        var instData =
+        {
+            obj : "oPlayer",
+            identNum : id,
+            bounce : canBounce,
+            deaths : deathsNumLevelJumpTrain
+        };
+        array_push(data, instData);
+    }
+    
     var dataString = json_stringify(data);
     var dataBuffer = buffer_create(string_byte_length(dataString) + 1, buffer_fixed, 1);
     buffer_write(dataBuffer, buffer_string, dataString);

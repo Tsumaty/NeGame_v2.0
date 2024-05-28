@@ -1,4 +1,4 @@
-if (bbox_top < other.y)
+if (bbox_top < other.yprevious)
 {
     with (other)
     {
@@ -22,6 +22,8 @@ else
     hp -= other.damage;
     if (hp <= 0.0)
     {
+        if (ds_list_find_index(killedKoluchs, id) == -1)
+            ds_list_add(killedKoluchs, id);
         instance_destroy();
     }
     with (other)

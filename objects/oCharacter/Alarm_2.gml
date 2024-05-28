@@ -1,7 +1,7 @@
 /// @desc проверка смены направления
 alarm[2] = changeDirPeriod;
 
-if (canChangeDir && x <= movingBorderLeft || x >= movingBorderRight)
+if (canChangeDir && (x <= movingBorderLeft || x >= movingBorderRight))
 {
     canChangeDir = false;
     alarm[4] = canChangeDirTime;

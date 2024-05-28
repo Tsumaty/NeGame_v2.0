@@ -31,7 +31,9 @@ deathNum = sndNums[0];
 deathMaxNum = sndNums[1];
 
 // пустой объект по центру для следования камеры
-spriteCenter = instance_create_depth(getCenterX(), getCenterY(), depth, oBlank);
+var spriteCenterX = getCenterX();
+var spriteCenterY = getCenterY();
+spriteCenter = instance_create_depth(spriteCenterX, spriteCenterY, depth, oBlank);
 spriteCenter.persistent = true;
 
 initCamera();
