@@ -59,4 +59,5 @@ bounceMaxNum = sndNums[1];
 startColor = image_blend; // начальный цвет
 startAlpha = image_alpha; // начальная прозрачность
 
+// задаём начальные переменные
 updateStartVars();

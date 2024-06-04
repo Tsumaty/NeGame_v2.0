@@ -38,7 +38,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_46A8C452","properties":[],"isDnd":false,"objectId":{"name":"oObstacle","path":"objects/oObstacle/oObstacle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-18.22381,"scaleX":50.25,"scaleY":8.125,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2134.2769,"y":855.6043,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5DE5E61A","properties":[],"isDnd":false,"objectId":{"name":"oObstacle","path":"objects/oObstacle/oObstacle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-18.22381,"scaleX":36.0,"scaleY":18.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2437.8108,"y":1071.7205,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_15FF3BE6","properties":[],"isDnd":false,"objectId":{"name":"oPlatform","path":"objects/oPlatform/oPlatform.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":10.875,"scaleY":2.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2003.0,"y":358.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_portal_menu","properties":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_portal_level2_menu","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextLevel","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"rMenu",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextX","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"4",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nextY","path":"objects/oTrigger/oTrigger.yy",},"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"value":"460",},
@@ -52,11 +52,11 @@
           ],"isDnd":false,"objectId":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294902015,"rotation":0.0,"scaleX":4.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-84.0,"y":216.0,},
       ],"visible":true,"depth":-10,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":2,"gridY":2,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Creatures","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5355DE99_1","properties":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_croogl_level2","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"horsp","path":"objects/oCreature/oCreature.yy",},"objectId":{"name":"oCreature","path":"objects/oCreature/oCreature.yy",},"value":"180",},
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"chatMsg","path":"objects/oCharacter/oCharacter.yy",},"objectId":{"name":"oCharacter","path":"objects/oCharacter/oCharacter.yy",},"value":"[\"Впереди злой враг\", \"Даже не представляю,\\nчто ты будешь\", \"с ним делать\"]",},
-          ],"isDnd":false,"objectId":{"name":"oCrooglick","path":"objects/oCrooglick/oCrooglick.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":-0.9,"scaleY":0.9,"imageIndex":1,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":904.0,"y":776.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_33A1FCF1","properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"chatMsg","path":"objects/oCharacter/oCharacter.yy",},"objectId":{"name":"oCharacter","path":"objects/oCharacter/oCharacter.yy",},"value":"[\"Впереди злой враг\", \"Даже не представляю,\\nчто ты будешь\\nс ним делать\"]",},
+          ],"isDnd":false,"objectId":{"name":"oCrooglick","path":"objects/oCrooglick/oCrooglick.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":-0.9,"scaleY":0.9,"imageIndex":1,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":904.0,"y":780.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_koluch_level2","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"movingBorderLeft","path":"objects/oCharacter/oCharacter.yy",},"objectId":{"name":"oCharacter","path":"objects/oCharacter/oCharacter.yy",},"value":"1540",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"movingBorderRight","path":"objects/oCharacter/oCharacter.yy",},"objectId":{"name":"oCharacter","path":"objects/oCharacter/oCharacter.yy",},"value":"2472",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"checkPlayerPeriod","path":"objects/oCharacter/oCharacter.yy",},"objectId":{"name":"oCharacter","path":"objects/oCharacter/oCharacter.yy",},"value":"0",},
@@ -97,7 +97,7 @@
     {"name":"inst_6C0593B9_1","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_55A2B3B0_1","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_534D1D08_1","path":"rooms/rLevel2/rLevel2.yy",},
-    {"name":"inst_5355DE99_1","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_croogl_level2","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_62AED7D4_1","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_6DCF84AE_1","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_FE71BB1_1","path":"rooms/rLevel2/rLevel2.yy",},
@@ -125,10 +125,10 @@
     {"name":"inst_379771F3_1","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_46A8C452","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_5DE5E61A","path":"rooms/rLevel2/rLevel2.yy",},
-    {"name":"inst_33A1FCF1","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_koluch_level2","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_5ACA676A","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_15FF3BE6","path":"rooms/rLevel2/rLevel2.yy",},
-    {"name":"inst_portal_menu","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_portal_level2_menu","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_57C56B10","path":"rooms/rLevel2/rLevel2.yy",},
   ],
   "inheritCreationOrder": false,

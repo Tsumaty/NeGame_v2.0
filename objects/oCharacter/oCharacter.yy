@@ -33,7 +33,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"chatMsg","varType":4,"value":"[]","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"chatMsg","varType":4,"value":"[\"Привет\"]","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "\"\"",
       ],"multiselect":false,"filters":[],},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"checkPlayerPeriod","varType":0,"value":"0.25","rangeEnabled":true,"rangeMin":0.0,"rangeMax":2.0,"listItems":[],"multiselect":false,"filters":[],},

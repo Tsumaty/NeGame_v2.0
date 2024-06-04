@@ -11,7 +11,6 @@ function initVars()
     if (object_index == oPlayer)
     {
         chatChar = noone;
-        chatCloud = noone;
         increasedJumpsNum = increasedJumpsNumstart;
     }
 }

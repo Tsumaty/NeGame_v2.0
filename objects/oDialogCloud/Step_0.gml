@@ -23,8 +23,6 @@ if (playAnim != 0)
             animPos = 0;
             playAnim = 0;
             visible = false;
-            if (endChatEvent == EndChatEvents.DestroyChatCloud)
-                instance_destroy();
         }
     }
 }
@@ -34,7 +32,6 @@ if (playMsgAnim != 0)
     msgVisible = true;
     msgScalex = animcurve_channel_evaluate(msgAnimCurve, msgAnimPos);
     msgScaley = msgScalex;
-    //if (!isLookingRight) msgx = bbox_left + (bbox_left - bbox_right) / 2 + 30;
     
     if (playMsgAnim == 1)
     {

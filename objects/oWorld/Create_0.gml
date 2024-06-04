@@ -31,10 +31,9 @@ teacherMsgSet =
         "Вроде ж не немой"]
 ];
 
-globalvar firstLaunch, level2Open;
+globalvar firstLaunch;
 ini_open("options.ini");
 firstLaunch = ini_read_real("GameOptions", "firstLaunch", true);
-level2Open = ini_read_real("GameOptions", "level2Open", false);
 ini_close();
 
 globalvar playerStartX, playerStartY, playerStartHp;
@@ -42,15 +41,28 @@ playerStartX = 810;
 playerStartY = -16;
 playerStartHp = 10;
 
-globalvar killedKoluchs;
-killedKoluchs = ds_list_create(); // список убитых колючей
-ini_open("killed_koluchs.ini");
-var listSize = ini_read_real("List", "size", 0);
-for (var i = 0; i < listSize; ++i)
+globalvar unlockedLevels, killedKoluchs;
+// список открытых уровней
+unlockedLevels = [1];
+ulFileName = "unlocked_levels.nes";
+if (file_exists(ulFileName))
 {
-    ds_list_add(killedKoluchs, ini_read_real("List", string("kol{0}", i), real(noone)));
+    var file = file_text_open_read(ulFileName);
+    var text = file_text_read_string(file);
+    unlockedLevels = json_parse(text);
+    file_text_close(file);
 }
-ini_close();
+
+// список убитых колючей
+killedKoluchs = array_create(0);
+kkFileName = "killed_koluchs.nes";
+if (file_exists(kkFileName))
+{
+    var file = file_text_open_read(kkFileName);
+    var text = file_text_read_string(file);
+    killedKoluchs = json_parse(text);
+    file_text_close(file);
+}
 /*
 ini_open("options.ini");
 room_goto(ini_read_real("GameOptions", "level", rMenu));

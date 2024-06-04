@@ -3,8 +3,10 @@ alarm[0] = changeDirPeriod;
 
 if (canChangeDir)
 {
-    if (x <= movingBorderLeft || x >= movingBorderRight)
+    if ((maxhorsp < 0 && x <= movingBorderLeft) || (maxhorsp > 0 && x >= movingBorderRight))
     {
+        canChangeDir = false;
+        alarm[1] = canChangeDirTime;
         if (movesCyclically)
         {
             maxhorsp *= -1;
@@ -12,13 +14,12 @@ if (canChangeDir)
         else
         {
             maxhorsp = 0;
-            //alarm[0] = -1; // останавливаем проверку
         }
+    }
+    if ((maxversp < 0 && y <= movingBorderTop) || (maxversp > 0 && y >= movingBorderBottom))
+    {
         canChangeDir = false;
         alarm[1] = canChangeDirTime;
-    }
-    if (y <= movingBorderTop || y >= movingBorderBottom)
-    {
         if (movesCyclically)
         {
             maxversp *= -1;
@@ -26,9 +27,6 @@ if (canChangeDir)
         else
         {
             maxversp = 0;
-            //alarm[0] = -1; // останавливаем проверку
         }
-        canChangeDir = false;
-        alarm[1] = canChangeDirTime;
     }
 }

@@ -39,5 +39,3 @@ msgTimer = -1; // таймер включения сообщения
 var sndNums = initSound(chatName);
 chatNum = sndNums[0];
 chatMaxNum = sndNums[1];
-
-endChatEvent = pointer_null; // событие конца разговора

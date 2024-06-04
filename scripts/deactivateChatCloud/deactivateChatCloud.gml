@@ -10,6 +10,7 @@ function deactivateChatCloud(chatCloud)
         // анимацию текста тоже проигрываем с конца
         msgAnimPos = 0.52;
         playMsgAnim = -1;
-        msgTimer = -1; // отключаем включение анимации текста
+        // отключаем включение анимации текста
+        msgTimer = -1;
     }
 }

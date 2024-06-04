@@ -8,11 +8,16 @@ ini_open("options.ini");
 ini_write_real("GameOptions", "firstLaunch", false);
 ini_close();
 
+with (oPlayer) updateStartVars();
+
 saveGame(string("negamesave{0}.nes", room));
 
-ini_open("killed_koluchs.ini");
-for (var i = 0; i < ds_list_size(killedKoluchs); ++i)
-{
-    ini_write_real("List", string("kol{0}", i), int64(ds_list_find_value(killedKoluchs, i)));
-}
-ini_close();
+var file = file_text_open_write(ulFileName);
+var arrayToSave = json_stringify(unlockedLevels);
+file_text_write_string(file, arrayToSave);
+file_text_close(file);
+
+file = file_text_open_write(kkFileName);
+var arrayToSave = json_stringify(killedKoluchs);
+file_text_write_string(file, arrayToSave);
+file_text_close(file);

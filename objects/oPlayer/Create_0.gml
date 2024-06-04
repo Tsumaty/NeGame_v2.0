@@ -9,6 +9,9 @@ chatMsgSet =
 [
     ["Действительно,\nпочему я молчу?", "Правда и сказать-то\nмне нечего"]
 ];
+chatCloud = instance_create_depth(bbox_right + 4, bbox_top, depth - 1, oDialogCloud,
+    {msg : chatMsgSet[0]});
+chatCloud.persistent = true;
 deathsNumLevelJumpTrain = 0; // количество смертей на уровне обучения прыжкам
 depth -= 5;
 

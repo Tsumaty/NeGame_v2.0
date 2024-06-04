@@ -22,8 +22,8 @@ else
     hp -= other.damage;
     if (hp <= 0.0)
     {
-        if (ds_list_find_index(killedKoluchs, id) == -1)
-            ds_list_add(killedKoluchs, id);
+        if (array_index(killedKoluchs, id) == -1)
+            array_push(killedKoluchs, id);
         instance_destroy();
     }
     with (other)

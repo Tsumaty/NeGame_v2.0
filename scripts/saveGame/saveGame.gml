@@ -1,12 +1,31 @@
 /// @desc функция сохранения
 function saveGame(fileName)
 {
-    with (oCreature)
+    var data = array_create(0);
+    
+    if (room == rLevelJumpTrain) with (oPlayer)
     {
-        updateStartVars();
+        var instData =
+        {
+            obj : "oPlayer",
+            identNum : id,
+            bounce : canBounce,
+            deaths : deathsNumLevelJumpTrain
+        };
+        array_push(data, instData);
     }
     
-    var data = array_create(0);
+    with (oCharacter)
+    {
+        var instData =
+        {
+            obj : "oCharacter",
+            identNum : id,
+            haleness : hp,
+            chatted : hasChatted
+        };
+        array_push(data, instData);
+    }
     
     with (oDoor)
     {
@@ -27,6 +46,7 @@ function saveGame(fileName)
             identNum : id,
             available : unlocked
         };
+        array_push(data, instData);
     }
     
     with (oMovingFloor)
@@ -44,18 +64,6 @@ function saveGame(fileName)
             backwards : movesCyclically,
             alarm0 : alarm[0],
             alarm1 : alarm[1]
-        };
-        array_push(data, instData);
-    }
-    
-    if (room == rLevelJumpTrain) with (oPlayer)
-    {
-        var instData =
-        {
-            obj : "oPlayer",
-            identNum : id,
-            bounce : canBounce,
-            deaths : deathsNumLevelJumpTrain
         };
         array_push(data, instData);
     }
